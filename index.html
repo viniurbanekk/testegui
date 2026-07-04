@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criadores de Learning Pages</title>
+<style>
+  :root {
+    --navy: #0f2647;
+    --navy-dark: #0a1a33;
+    --blue: #1e56a0;
+    --gray-100: #f4f6f9;
+    --gray-300: #dfe4ea;
+    --gray-600: #5a6472;
+    --gray-800: #2b323c;
+    --white: #ffffff;
+    --radius: 8px;
+    --shadow: 0 4px 16px rgba(15, 38, 71, 0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    color: var(--gray-800);
+    background: var(--white);
+    line-height: 1.6;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  img { max-width: 100%; display: block; }
+
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--navy);
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+  }
+
+  .logo {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+
+  .logo span { color: #6fa8dc; }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--gray-300);
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links a:hover { color: var(--white); }
+
+  .nav-cta {
+    background: var(--blue);
+    color: var(--white) !important;
+    padding: 10px 22px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s ease;
+  }
+
+  .nav-cta:hover { background: #16407c; }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color: var(--white);
+    padding: 96px 24px 88px;
+  }
+
+  .hero-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    background: rgba(111, 168, 220, 0.15);
+    color: #9cc4ea;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: #6fa8dc;
+  }
+
+  .hero p {
+    font-size: 18px;
+    color: var(--gray-300);
+    max-width: 520px;
+    margin-bottom: 32px;
+  }
+
+  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.15s ease, background 0.2s ease;
+  }
+
+  .btn-primary { background: var(--blue); color: var(--white); }
+  .btn-primary:hover { background: #16407c; transform: translateY(-2px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.35);
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+
+  .hero-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 28px;
+  }
+
+  .hero-card ul { list-style: none; }
+
+  .hero-card li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 15px;
+    color: var(--gray-300);
+  }
+
+  .hero-card li:last-child { border-bottom: none; }
+
+  .check {
+    color: #6fa8dc;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* Trust bar */
+  .trust {
+    padding: 32px 24px;
+    background: var(--gray-100);
+    border-bottom: 1px solid var(--gray-300);
+  }
+
+  .trust-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .trust-label {
+    font-size: 13px;
+    color: var(--gray-600);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .trust-logos {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .trust-logos span {
+    font-weight: 700;
+    color: var(--gray-600);
+    font-size: 16px;
+    opacity: 0.7;
+  }
+
+  /* Section generic */
+  section { padding: 88px 24px; }
+
+  .section-head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 56px;
+  }
+
+  .section-head .eyebrow {
+    background: rgba(30, 86, 160, 0.08);
+    color: var(--blue);
+  }
+
+  .section-head h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 14px;
+  }
+
+  .section-head p {
+    color: var(--gray-600);
+    font-size: 16px;
+  }
+
+  /* Services */
+  .services {
+    background: var(--white);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 12px;
+    padding: 32px 28px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(15, 38, 71, 0.12);
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: rgba(30, 86, 160, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: var(--blue);
+    margin-bottom: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 19px;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .service-card p {
+    color: var(--gray-600);
+    font-size: 15px;
+  }
+
+  /* Process */
+  .process { background: var(--gray-100); }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .step {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 16px;
+  }
+
+  .step h3 { font-size: 16px; color: var(--navy); margin-bottom: 8px; }
+  .step p { font-size: 14px; color: var(--gray-600); }
+
+  /* Portfolio */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .portfolio-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--gray-300);
+    box-shadow: var(--shadow);
+  }
+
+  .portfolio-thumb {
+    height: 160px;
+    background: linear-gradient(135deg, var(--blue), var(--navy));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.85);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+  }
+
+  .portfolio-body { padding: 20px; background: var(--white); }
+  .portfolio-body h3 { font-size: 16px; color: var(--navy); margin-bottom: 6px; }
+  .portfolio-body p { font-size: 14px; color: var(--gray-600); }
+
+  /* Stats */
+  .stats {
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 36px;
+    font-weight: 800;
+    color: #6fa8dc;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    font-size: 14px;
+    color: var(--gray-300);
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .testimonial-card {
+    background: var(--gray-100);
+    border-radius: 12px;
+    padding: 32px;
+    border-left: 4px solid var(--blue);
+  }
+
+  .testimonial-card p.quote {
+    font-size: 16px;
+    color: var(--gray-800);
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .author-name { font-weight: 700; font-size: 14px; color: var(--navy); }
+  .author-role { font-size: 13px; color: var(--gray-600); }
+
+  /* Pricing */
+  .pricing { background: var(--gray-100); }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .plan {
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--gray-300);
+    padding: 32px 28px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .plan.featured {
+    border: 2px solid var(--blue);
+    transform: scale(1.04);
+    position: relative;
+  }
+
+  .plan-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--blue);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 999px;
+  }
+
+  .plan h3 { font-size: 18px; color: var(--navy); margin-bottom: 8px; }
+  .plan .price { font-size: 34px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+  .plan .price span { font-size: 14px; font-weight: 500; color: var(--gray-600); }
+  .plan .plan-desc { font-size: 14px; color: var(--gray-600); margin-bottom: 24px; }
+
+  .plan ul { list-style: none; margin-bottom: 28px; flex-grow: 1; }
+  .plan li {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--gray-800);
+    padding: 8px 0;
+  }
+
+  .plan .btn { width: 100%; text-align: center; }
+
+  /* CTA */
+  .cta {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color: var(--white);
+    text-align: center;
+  }
+
+  .cta h2 { font-size: 30px; font-weight: 800; margin-bottom: 16px; }
+  .cta p { color: var(--gray-300); max-width: 520px; margin: 0 auto 32px; }
+
+  /* Footer */
+  footer {
+    background: var(--navy-dark);
+    color: var(--gray-300);
+    padding: 56px 24px 24px;
+  }
+
+  .footer-grid {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .footer-brand p { font-size: 14px; color: var(--gray-300); margin-top: 12px; max-width: 280px; }
+
+  footer h4 {
+    color: var(--white);
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  footer ul { list-style: none; }
+  footer li { margin-bottom: 10px; }
+  footer a { font-size: 14px; color: var(--gray-300); transition: color 0.2s ease; }
+  footer a:hover { color: var(--white); }
+
+  .footer-bottom {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--gray-600);
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+  :is(.services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid) > .reveal:nth-child(1) { transition-delay: 0s; }
+  :is(.services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid) > .reveal:nth-child(2) { transition-delay: 0.08s; }
+  :is(.services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid) > .reveal:nth-child(3) { transition-delay: 0.16s; }
+  :is(.services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid) > .reveal:nth-child(4) { transition-delay: 0.24s; }
+  :is(.services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid) > .reveal:nth-child(5) { transition-delay: 0.32s; }
+  :is(.services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid) > .reveal:nth-child(6) { transition-delay: 0.4s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* Cover / capa de abertura */
+  .cover {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at 50% 30%, #16345e 0%, var(--navy-dark) 70%);
+    color: var(--white);
+    position: relative;
+    padding: 48px 24px;
+    overflow: hidden;
+  }
+
+  .cover-logo {
+    margin-bottom: 28px;
+    animation: coverFadeIn 0.8s ease both;
+  }
+
+  .cover-title {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+    animation: coverFadeIn 0.8s ease 0.15s both;
+  }
+
+  .cover-title span { color: #6fa8dc; }
+
+  .cover-tagline {
+    font-size: 14px;
+    color: var(--gray-300);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: coverFadeIn 0.8s ease 0.3s both;
+  }
+
+  @keyframes coverFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gray-300);
+    font-size: 26px;
+    line-height: 1;
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, 10px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cover-logo, .cover-title, .cover-tagline, .scroll-cue { animation: none; opacity: 1; }
+  }
+
+  @media (max-width: 640px) {
+    .cover-title { font-size: 30px; }
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid, .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .plan.featured { transform: none; }
+  }
+
+  @media (max-width: 640px) {
+    .nav-links, .nav-cta { display: none; }
+    .menu-toggle { display: block; }
+    .nav-links.open {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--navy);
+      flex-direction: column;
+      padding: 16px 24px;
+      gap: 16px;
+    }
+    .hero h1 { font-size: 32px; }
+    .services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid, .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav container">
+    <a href="#" class="logo" style="display:flex; align-items:center; gap:10px;">
+      <svg width="32" height="32" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGradNav" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#1e56a0"/>
+            <stop offset="100%" stop-color="#0a1a33"/>
+          </linearGradient>
+        </defs>
+        <rect x="1" y="1" width="70" height="70" rx="18" fill="url(#logoGradNav)" stroke="#6fa8dc" stroke-width="1.5"/>
+        <text x="36" y="46" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="28" fill="#ffffff">LP</text>
+        <path d="M20 54 L28 46 L36 52 L52 34" stroke="#6fa8dc" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Learning<span>Pages</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#processo">Processo</a></li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="#precos">Preços</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+    </ul>
+    <a href="#contato" class="btn nav-cta">Fale conosco</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">&#9776;</button>
+  </nav>
+</header>
+
+<section class="cover">
+  <div class="cover-logo">
+    <svg width="120" height="120" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="logoGradCover" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#1e56a0"/>
+          <stop offset="100%" stop-color="#0a1a33"/>
+        </linearGradient>
+      </defs>
+      <rect x="1" y="1" width="70" height="70" rx="18" fill="url(#logoGradCover)" stroke="#6fa8dc" stroke-width="1.5"/>
+      <text x="36" y="46" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="28" fill="#ffffff">LP</text>
+      <path d="M20 54 L28 46 L36 52 L52 34" stroke="#6fa8dc" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <h1 class="cover-title">Learning<span>Pages</span></h1>
+  <p class="cover-tagline">Criadores de Learning Pages</p>
+  <a href="#hero" class="scroll-cue" aria-label="Rolar para baixo">&#8595;</a>
+</section>
+
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">Especialistas em Educação Corporativa</span>
+      <h1>Criamos <em>learning pages</em> que transformam conhecimento em resultado</h1>
+      <p>Desenvolvemos páginas de treinamento e aprendizagem sob medida para empresas que querem capacitar equipes com clareza, engajamento e performance.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/554197115308" target="_blank" rel="noopener" class="btn btn-primary">Solicitar orçamento</a>
+        <a href="https://viniurbanekk.github.io/Cart-odigital/" target="_blank" rel="noopener" class="btn btn-outline">Ver portfólio</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <ul>
+        <li><span class="check">&#10003;</span> Design responsivo e acessível</li>
+        <li><span class="check">&#10003;</span> Conteúdo pedagógico estruturado</li>
+        <li><span class="check">&#10003;</span> Integração com LMS e plataformas</li>
+        <li><span class="check">&#10003;</span> Métricas de progresso e conclusão</li>
+        <li><span class="check">&#10003;</span> Entrega em até 15 dias úteis</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-inner reveal">
+    <span class="trust-label">Confiado por equipes de treinamento em</span>
+    <div class="trust-logos">
+      <span>NEXUS Corp</span>
+      <span>Vértice Ed.</span>
+      <span>Grupo Alfa</span>
+      <span>OrionRH</span>
+      <span>Bússola Corp</span>
+    </div>
+  </div>
+</div>
+
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">O que fazemos</span>
+      <h2>Serviços para sua learning page</h2>
+      <p>Do planejamento pedagógico ao código final, cuidamos de cada etapa da criação da sua página de aprendizagem.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">&#128221;</div>
+        <h3>Design instrucional</h3>
+        <p>Estruturamos o conteúdo com base em objetivos de aprendizagem claros e metodologias comprovadas.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#127912;</div>
+        <h3>UI/UX personalizado</h3>
+        <p>Layouts exclusivos alinhados à identidade visual da sua marca, pensados para engajar o aluno.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#9881;</div>
+        <h3>Desenvolvimento web</h3>
+        <p>Páginas rápidas, responsivas e compatíveis com os principais navegadores e dispositivos.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#128279;</div>
+        <h3>Integração com LMS</h3>
+        <p>Conectamos sua página aos principais sistemas de gestão de aprendizagem (SCORM, xAPI e mais).</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#128202;</div>
+        <h3>Analytics de aprendizagem</h3>
+        <p>Dashboards para acompanhar progresso, conclusão e engajamento dos participantes em tempo real.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#128295;</div>
+        <h3>Suporte contínuo</h3>
+        <p>Manutenção, atualizações de conteúdo e suporte técnico após a entrega do projeto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="processo">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Nosso processo em 4 etapas</h2>
+      <p>Um método claro e transparente, do briefing à publicação da sua learning page.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-number">1</div>
+        <h3>Briefing</h3>
+        <p>Entendemos seus objetivos, público-alvo e conteúdo a ser transformado em página.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-number">2</div>
+        <h3>Roteiro e design</h3>
+        <p>Criamos o roteiro pedagógico e o layout visual para aprovação.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-number">3</div>
+        <h3>Desenvolvimento</h3>
+        <p>Codificamos a página com foco em performance, acessibilidade e responsividade.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-number">4</div>
+        <h3>Entrega e suporte</h3>
+        <p>Publicamos, integramos ao seu LMS e acompanhamos os primeiros resultados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Trabalhos recentes</span>
+      <h2>Portfólio de learning pages</h2>
+      <p>Alguns exemplos de páginas de aprendizagem que desenvolvemos para nossos clientes.</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card reveal">
+        <div class="portfolio-thumb">Onboarding Corporativo</div>
+        <div class="portfolio-body">
+          <h3>Trilha de Onboarding</h3>
+          <p>Página de integração para novos colaboradores com módulos interativos.</p>
+        </div>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="portfolio-thumb">Compliance &amp; LGPD</div>
+        <div class="portfolio-body">
+          <h3>Treinamento de Compliance</h3>
+          <p>Curso obrigatório com certificação automática e trilha de avaliação.</p>
+        </div>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="portfolio-thumb">Liderança Ágil</div>
+        <div class="portfolio-body">
+          <h3>Programa de Liderança</h3>
+          <p>Learning page para desenvolvimento de lideranças com estudos de caso.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="reveal">
+        <div class="stat-number">120+</div>
+        <div class="stat-label">Learning pages entregues</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-number">45</div>
+        <div class="stat-label">Empresas atendidas</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">Satisfação dos clientes</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-number">15 dias</div>
+        <div class="stat-label">Prazo médio de entrega</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="depoimentos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Depoimentos</span>
+      <h2>O que nossos clientes dizem</h2>
+      <p>Empresas que confiaram no nosso trabalho para criar suas páginas de aprendizagem.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <p class="quote">"A equipe entregou uma learning page que superou nossas expectativas. O engajamento dos colaboradores aumentou significativamente."</p>
+        <div class="testimonial-author">
+          <div class="avatar">MC</div>
+          <div>
+            <div class="author-name">Mariana Costa</div>
+            <div class="author-role">Gerente de T&amp;D, NEXUS Corp</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <p class="quote">"Processo transparente do início ao fim. A integração com nosso LMS foi tranquila e o suporte pós-entrega é excelente."</p>
+        <div class="testimonial-author">
+          <div class="avatar">RS</div>
+          <div>
+            <div class="author-name">Rodrigo Silva</div>
+            <div class="author-role">Head de RH, Grupo Alfa</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="precos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Planos</span>
+      <h2>Planos para todo tipo de projeto</h2>
+      <p>Escolha o plano ideal para o tamanho e a complexidade da sua learning page.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="plan reveal">
+        <h3>Essencial</h3>
+        <div class="price">R$ 2.900<span>/projeto</span></div>
+        <p class="plan-desc">Ideal para páginas de treinamento simples e diretas.</p>
+        <ul>
+          <li>&#10003; Até 5 seções de conteúdo</li>
+          <li>&#10003; Design responsivo</li>
+          <li>&#10003; 1 rodada de revisão</li>
+          <li>&#10003; Entrega em 10 dias úteis</li>
+        </ul>
+        <a href="#contato" class="btn btn-primary">Escolher plano</a>
+      </div>
+      <div class="plan featured reveal">
+        <span class="plan-badge">Mais escolhido</span>
+        <h3>Profissional</h3>
+        <div class="price">R$ 5.900<span>/projeto</span></div>
+        <p class="plan-desc">Para learning pages completas com integração e analytics.</p>
+        <ul>
+          <li>&#10003; Seções ilimitadas</li>
+          <li>&#10003; Design personalizado</li>
+          <li>&#10003; Integração com LMS</li>
+          <li>&#10003; Dashboard de progresso</li>
+          <li>&#10003; 3 rodadas de revisão</li>
+          <li>&#10003; Entrega em 15 dias úteis</li>
+        </ul>
+        <a href="#contato" class="btn btn-primary">Escolher plano</a>
+      </div>
+      <div class="plan reveal">
+        <h3>Enterprise</h3>
+        <div class="price">Sob consulta</div>
+        <p class="plan-desc">Para programas de treinamento com múltiplas learning pages.</p>
+        <ul>
+          <li>&#10003; Projetos ilimitados</li>
+          <li>&#10003; Gerente de conta dedicado</li>
+          <li>&#10003; SLA personalizado</li>
+          <li>&#10003; Suporte prioritário</li>
+        </ul>
+        <a href="#contato" class="btn btn-outline" style="border-color: var(--gray-300); color: var(--navy);">Falar com vendas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contato">
+  <div class="container reveal">
+    <h2>Pronto para criar sua learning page?</h2>
+    <p>Fale com nossa equipe e receba uma proposta personalizada para o seu projeto de treinamento.</p>
+    <a href="https://wa.me/554197115308" target="_blank" rel="noopener" class="btn btn-primary">Solicitar orçamento</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">Learning<span>Pages</span></a>
+      <p>Criamos páginas de aprendizagem que transformam conhecimento em resultado para empresas de todos os tamanhos.</p>
+    </div>
+    <div>
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Recursos</h4>
+      <ul>
+        <li><a href="#precos">Preços</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="mailto:contato@learningpages.com.br">contato@learningpages.com.br</a></li>
+        <li><a href="tel:+551140028922">(11) 4002-8922</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 LearningPages. Todos os direitos reservados.
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+</script>
+
+</body>
+</html>
