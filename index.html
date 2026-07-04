@@ -1,1782 +1,1028 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fisioterapia de Alta Performance para Bailarinas | Bruna Dominguez</title>
-  <meta name="description" content="Evite lesões, recupere seu corpo pós-ensaio e alcance sua máxima performance técnica. Fisioterapia especializada para dança por Bruna Dominguez em Curitiba/PR.">
-  <link rel="icon" href="assets/logo.jpg">
-  
-  <!-- Fontes Premium -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --primary: #B86878;       /* Rose Gold Elegante */
-      --primary-dark: #8C4755;  /* Hover/Foco do Rosa */
-      --primary-light: #F6EDEE; /* Fundo Suave Rosado */
-      --accent: #C5A880;        /* Dourado Soft */
-      --accent-dark: #A58960;   /* Dourado Dark para Títulos/Linhas */
-      --bg-champagne: #FAF7F2;  /* Fundo Principal Quente e Sofisticado */
-      --white: #FFFFFF;
-      --dark: #2C1F21;          /* Texto Escuro Burgundy/Charcoal */
-      --dark-soft: #634F52;     /* Texto Secundário */
-      
-      --radius-sm: 8px;
-      --radius-md: 16px;
-      --radius-lg: 24px;
-      --radius-xl: 40px;
-      --radius-pill: 9999px;
-      
-      --shadow-soft: 0 10px 30px rgba(44, 31, 33, 0.04);
-      --shadow-md: 0 20px 40px rgba(44, 31, 33, 0.08);
-      --shadow-lg: 0 30px 60px rgba(44, 31, 33, 0.12);
-      --shadow-btn: 0 12px 24px rgba(184, 104, 120, 0.3);
-      --shadow-whatsapp: 0 12px 24px rgba(37, 211, 102, 0.3);
-      
-      --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criadores de Learning Pages</title>
+<style>
+  :root {
+    --navy: #0f2647;
+    --navy-dark: #0a1a33;
+    --blue: #1e56a0;
+    --gray-100: #f4f6f9;
+    --gray-300: #dfe4ea;
+    --gray-600: #5a6472;
+    --gray-800: #2b323c;
+    --white: #ffffff;
+    --radius: 8px;
+    --shadow: 0 4px 16px rgba(15, 38, 71, 0.08);
+  }
 
-    /* Reset & Estilos Globais */
-    * { 
-      box-sizing: border-box; 
-      margin: 0; 
-      padding: 0; 
-    }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { 
-      scroll-behavior: smooth; 
-    }
+  html { scroll-behavior: smooth; }
 
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      color: var(--dark);
-      background: var(--bg-champagne);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
+  body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    color: var(--gray-800);
+    background: var(--white);
+    line-height: 1.6;
+  }
 
-    a { 
-      text-decoration: none; 
-      color: inherit; 
-    }
-    
-    img { 
-      max-width: 100%; 
-      display: block; 
-    }
-    
-    ul { 
-      list-style: none; 
-    }
+  a { text-decoration: none; color: inherit; }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+  img { max-width: 100%; display: block; }
 
-    section { 
-      padding: 100px 0; 
-      position: relative;
-    }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
 
-    /* Tipografia Especial */
-    h1, h2, h3, .serif-font {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      line-height: 1.2;
-    }
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--navy);
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
 
-    .signature-font {
-      font-family: 'Alex Brush', cursive;
-      color: var(--accent-dark);
-      font-size: 28px;
-    }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+  }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--primary-light);
-      color: var(--primary-dark);
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      padding: 8px 18px;
-      border-radius: var(--radius-pill);
-      margin-bottom: 24px;
-    }
+  .logo {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
 
-    .eyebrow::before {
-      content: "";
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      background: var(--primary);
-      border-radius: 50%;
-    }
+  .logo span { color: #6fa8dc; }
 
-    .section-head {
-      max-width: 720px;
-      margin: 0 auto 60px;
-      text-align: center;
-    }
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
 
-    .section-head h2 {
-      font-size: clamp(32px, 4.5vw, 44px);
-      margin-bottom: 18px;
-      color: var(--dark);
-    }
+  .nav-links a {
+    color: var(--gray-300);
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
 
-    .section-head p {
-      color: var(--dark-soft);
-      font-size: 18px;
-      font-weight: 400;
-    }
+  .nav-links a:hover { color: var(--white); }
 
-    /* Header com Glassmorphism */
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(250, 247, 242, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      z-index: 1000;
-      border-bottom: 1px solid rgba(184, 104, 120, 0.08);
-      transition: var(--transition-smooth);
-    }
+  .nav-cta {
+    background: var(--blue);
+    color: var(--white) !important;
+    padding: 10px 22px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s ease;
+  }
 
-    header.scrolled {
-      background: rgba(250, 247, 242, 0.95);
-      box-shadow: 0 10px 30px rgba(44, 31, 33, 0.05);
-    }
+  .nav-cta:hover { background: #16407c; }
 
-    .nav {
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color: var(--white);
+    padding: 96px 24px 88px;
+  }
+
+  .hero-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    background: rgba(111, 168, 220, 0.15);
+    color: #9cc4ea;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: #6fa8dc;
+  }
+
+  .hero p {
+    font-size: 18px;
+    color: var(--gray-300);
+    max-width: 520px;
+    margin-bottom: 32px;
+  }
+
+  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.15s ease, background 0.2s ease;
+  }
+
+  .btn-primary { background: var(--blue); color: var(--white); }
+  .btn-primary:hover { background: #16407c; transform: translateY(-2px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.35);
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+
+  .hero-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 28px;
+  }
+
+  .hero-card ul { list-style: none; }
+
+  .hero-card li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 15px;
+    color: var(--gray-300);
+  }
+
+  .hero-card li:last-child { border-bottom: none; }
+
+  .check {
+    color: #6fa8dc;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* Trust bar */
+  .trust {
+    padding: 32px 24px;
+    background: var(--gray-100);
+    border-bottom: 1px solid var(--gray-300);
+  }
+
+  .trust-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .trust-label {
+    font-size: 13px;
+    color: var(--gray-600);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .trust-logos {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .trust-logos span {
+    font-weight: 700;
+    color: var(--gray-600);
+    font-size: 16px;
+    opacity: 0.7;
+  }
+
+  /* Section generic */
+  section { padding: 88px 24px; }
+
+  .section-head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 56px;
+  }
+
+  .section-head .eyebrow {
+    background: rgba(30, 86, 160, 0.08);
+    color: var(--blue);
+  }
+
+  .section-head h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 14px;
+  }
+
+  .section-head p {
+    color: var(--gray-600);
+    font-size: 16px;
+  }
+
+  /* Services */
+  .services {
+    background: var(--white);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 12px;
+    padding: 32px 28px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(15, 38, 71, 0.12);
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: rgba(30, 86, 160, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: var(--blue);
+    margin-bottom: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 19px;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .service-card p {
+    color: var(--gray-600);
+    font-size: 15px;
+  }
+
+  /* Process */
+  .process { background: var(--gray-100); }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .step {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 16px;
+  }
+
+  .step h3 { font-size: 16px; color: var(--navy); margin-bottom: 8px; }
+  .step p { font-size: 14px; color: var(--gray-600); }
+
+  /* Portfolio */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .portfolio-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--gray-300);
+    box-shadow: var(--shadow);
+  }
+
+  .portfolio-thumb {
+    height: 160px;
+    background: linear-gradient(135deg, var(--blue), var(--navy));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.85);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+  }
+
+  .portfolio-body { padding: 20px; background: var(--white); }
+  .portfolio-body h3 { font-size: 16px; color: var(--navy); margin-bottom: 6px; }
+  .portfolio-body p { font-size: 14px; color: var(--gray-600); }
+
+  /* Stats */
+  .stats {
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 36px;
+    font-weight: 800;
+    color: #6fa8dc;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    font-size: 14px;
+    color: var(--gray-300);
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .testimonial-card {
+    background: var(--gray-100);
+    border-radius: 12px;
+    padding: 32px;
+    border-left: 4px solid var(--blue);
+  }
+
+  .testimonial-card p.quote {
+    font-size: 16px;
+    color: var(--gray-800);
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .author-name { font-weight: 700; font-size: 14px; color: var(--navy); }
+  .author-role { font-size: 13px; color: var(--gray-600); }
+
+  /* Pricing */
+  .pricing { background: var(--gray-100); }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .plan {
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--gray-300);
+    padding: 32px 28px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .plan.featured {
+    border: 2px solid var(--blue);
+    transform: scale(1.04);
+    position: relative;
+  }
+
+  .plan-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--blue);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 999px;
+  }
+
+  .plan h3 { font-size: 18px; color: var(--navy); margin-bottom: 8px; }
+  .plan .price { font-size: 34px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+  .plan .price span { font-size: 14px; font-weight: 500; color: var(--gray-600); }
+  .plan .plan-desc { font-size: 14px; color: var(--gray-600); margin-bottom: 24px; }
+
+  .plan ul { list-style: none; margin-bottom: 28px; flex-grow: 1; }
+  .plan li {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--gray-800);
+    padding: 8px 0;
+  }
+
+  .plan .btn { width: 100%; text-align: center; }
+
+  /* CTA */
+  .cta {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color: var(--white);
+    text-align: center;
+  }
+
+  .cta h2 { font-size: 30px; font-weight: 800; margin-bottom: 16px; }
+  .cta p { color: var(--gray-300); max-width: 520px; margin: 0 auto 32px; }
+
+  /* Footer */
+  footer {
+    background: var(--navy-dark);
+    color: var(--gray-300);
+    padding: 56px 24px 24px;
+  }
+
+  .footer-grid {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .footer-brand p { font-size: 14px; color: var(--gray-300); margin-top: 12px; max-width: 280px; }
+
+  footer h4 {
+    color: var(--white);
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  footer ul { list-style: none; }
+  footer li { margin-bottom: 10px; }
+  footer a { font-size: 14px; color: var(--gray-300); transition: color 0.2s ease; }
+  footer a:hover { color: var(--white); }
+
+  .footer-bottom {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--gray-600);
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+  :is(.services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid) > .reveal:nth-child(1) { transition-delay: 0s; }
+  :is(.services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid) > .reveal:nth-child(2) { transition-delay: 0.08s; }
+  :is(.services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid) > .reveal:nth-child(3) { transition-delay: 0.16s; }
+  :is(.services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid) > .reveal:nth-child(4) { transition-delay: 0.24s; }
+  :is(.services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid) > .reveal:nth-child(5) { transition-delay: 0.32s; }
+  :is(.services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid) > .reveal:nth-child(6) { transition-delay: 0.4s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* Cover / capa de abertura */
+  .cover {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at 50% 30%, #16345e 0%, var(--navy-dark) 70%);
+    color: var(--white);
+    position: relative;
+    padding: 48px 24px;
+    overflow: hidden;
+  }
+
+  .cover-logo {
+    margin-bottom: 28px;
+    animation: coverFadeIn 0.8s ease both;
+  }
+
+  .cover-title {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+    animation: coverFadeIn 0.8s ease 0.15s both;
+  }
+
+  .cover-title span { color: #6fa8dc; }
+
+  .cover-tagline {
+    font-size: 14px;
+    color: var(--gray-300);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: coverFadeIn 0.8s ease 0.3s both;
+  }
+
+  @keyframes coverFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gray-300);
+    font-size: 26px;
+    line-height: 1;
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, 10px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cover-logo, .cover-title, .cover-tagline, .scroll-cue { animation: none; opacity: 1; }
+  }
+
+  @media (max-width: 640px) {
+    .cover-title { font-size: 30px; }
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid, .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .plan.featured { transform: none; }
+  }
+
+  @media (max-width: 640px) {
+    .nav-links, .nav-cta { display: none; }
+    .menu-toggle { display: block; }
+    .nav-links.open {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 0;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .brand img {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-    }
-
-    .brand-text {
-      line-height: 1.2;
-    }
-
-    .brand-text strong {
-      display: block;
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--primary-dark);
-      letter-spacing: -0.02em;
-    }
-
-    .brand-text span {
-      font-family: 'Alex Brush', cursive;
-      font-size: 22px;
-      color: var(--accent-dark);
-      font-weight: 400;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 36px;
-    }
-
-    .nav-links a {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--dark-soft);
-      position: relative;
-      padding: 6px 0;
-      transition: var(--transition-smooth);
-    }
-
-    .nav-links a::after {
-      content: "";
       position: absolute;
-      bottom: 0;
+      top: 100%;
       left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--primary);
-      transition: var(--transition-smooth);
-    }
-
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-cta {
-      background: var(--primary);
-      color: var(--white);
-      padding: 12px 28px;
-      border-radius: var(--radius-pill);
-      font-weight: 700;
-      font-size: 14px;
-      box-shadow: var(--shadow-btn);
-      transition: var(--transition-smooth);
-      white-space: nowrap;
-    }
-
-    .nav-cta:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 16px 32px rgba(184, 104, 120, 0.4);
-    }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 28px;
-      color: var(--primary-dark);
-      cursor: pointer;
-      line-height: 1;
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 120px 0 100px;
-      overflow: hidden;
-      background: radial-gradient(circle at 80% 20%, rgba(246, 237, 238, 0.8) 0%, rgba(250, 247, 242, 1) 70%);
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(38px, 5.5vw, 56px);
-      font-weight: 700;
-      line-height: 1.15;
-      color: var(--dark);
-      margin-bottom: 24px;
-    }
-
-    .hero h1 span.gradient {
-      color: var(--primary-dark);
-      display: block;
-    }
-
-    .hero p.lead {
-      font-size: 19px;
-      color: var(--dark-soft);
-      max-width: 540px;
-      margin-bottom: 36px;
-      font-weight: 400;
-    }
-
-    .hero-ctas {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 16px 36px;
-      border-radius: var(--radius-pill);
-      font-weight: 700;
-      font-size: 15px;
-      transition: var(--transition-smooth);
-      cursor: pointer;
-    }
-
-    .btn-whatsapp {
-      background: #25D366;
-      color: var(--white);
-      box-shadow: var(--shadow-whatsapp);
-    }
-
-    .btn-whatsapp:hover {
-      background: #20ba59;
-      transform: translateY(-3px);
-      box-shadow: 0 18px 36px rgba(37, 211, 102, 0.45);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--dark);
-      border: 2px solid var(--dark-soft);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--primary);
-      color: var(--primary);
-      transform: translateY(-3px);
-      background: rgba(184, 104, 120, 0.03);
-    }
-
-    .credentials-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .credentials-strip li {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--dark-soft);
-      background: var(--white);
-      border: 1px solid rgba(184, 104, 120, 0.15);
-      padding: 8px 18px;
-      border-radius: var(--radius-pill);
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .credentials-strip li::before {
-      content: "✓";
-      color: var(--primary);
-      font-weight: 800;
-    }
-
-    .hero-visual {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-blob {
-      position: absolute;
-      width: 110%;
-      height: 110%;
-      background: radial-gradient(circle, rgba(184, 104, 120, 0.12) 0%, rgba(250, 247, 242, 0) 70%);
-      border-radius: 40% 60% 60% 40% / 45% 45% 55% 55%;
-      z-index: 0;
-      animation: morphBlob 12s infinite alternate ease-in-out;
-    }
-
-    .hero-image-wrapper {
-      position: relative;
-      z-index: 1;
-      border-radius: var(--radius-xl) var(--radius-xl) 180px var(--radius-xl);
-      overflow: hidden;
-      border: 6px solid var(--white);
-      box-shadow: var(--shadow-lg);
-      transition: var(--transition-smooth);
-    }
-
-    .hero-image-wrapper:hover {
-      transform: scale(1.02) rotate(1deg);
-    }
-
-    .hero-image-wrapper img {
-      width: 380px;
-      height: 420px;
-      object-fit: cover;
-    }
-
-    .hero-floating-badge {
-      position: absolute;
-      bottom: 24px;
-      right: -10px;
-      background: rgba(44, 31, 33, 0.9);
-      color: var(--white);
-      padding: 12px 24px;
-      border-radius: var(--radius-md);
-      font-size: 14px;
-      font-weight: 600;
-      z-index: 2;
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow-md);
-      border-left: 3px solid var(--primary);
-    }
-
-    .hero-floating-badge span {
-      display: block;
-      font-size: 11px;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 2px;
-    }
-
-    @keyframes morphBlob {
-      0% { border-radius: 40% 60% 60% 40% / 45% 45% 55% 55%; }
-      100% { border-radius: 60% 40% 40% 60% / 55% 55% 45% 45%; }
-    }
-
-    /* Pilares de Alta Performance (Diferenciais) */
-    .pilares {
-      background: var(--white);
-    }
-
-    .pilares-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-
-    .pilar-card {
-      background: var(--bg-champagne);
-      border-radius: var(--radius-lg);
-      padding: 40px 32px;
-      border: 1px solid rgba(184, 104, 120, 0.08);
-      transition: var(--transition-smooth);
-      position: relative;
-    }
-
-    .pilar-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-md);
-      border-color: rgba(184, 104, 120, 0.25);
-    }
-
-    .pilar-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: var(--radius-md);
-      background: var(--white);
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      margin-bottom: 24px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(184, 104, 120, 0.05);
-    }
-
-    .pilar-card h3 {
-      font-size: 22px;
-      margin-bottom: 14px;
-      color: var(--dark);
-    }
-
-    .pilar-card p {
-      color: var(--dark-soft);
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    /* Seção Sobre a Bruna */
-    .sobre {
-      background: var(--bg-champagne);
-    }
-
-    .sobre-inner {
-      display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 64px;
-      align-items: center;
-    }
-
-    .sobre-visual {
-      position: relative;
-    }
-
-    .sobre-photo {
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      border: 4px solid var(--primary);
-      aspect-ratio: 4 / 5;
-      background: var(--primary-light);
-    }
-
-    .sobre-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 48% 50%;
-      display: block;
-    }
-
-    .sobre-text h2 {
-      font-size: clamp(28px, 4vw, 40px);
-      margin-bottom: 24px;
-      color: var(--dark);
-    }
-
-    .sobre-text p {
-      margin-bottom: 20px;
-      color: var(--dark-soft);
-      font-size: 16px;
-      line-height: 1.7;
-    }
-
-    .sobre-text p strong {
-      color: var(--dark);
-    }
-
-    .sobre-list {
-      margin-top: 28px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      right: 0;
+      background: var(--navy);
+      flex-direction: column;
+      padding: 16px 24px;
       gap: 16px;
     }
-
-    .sobre-list li {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      font-size: 14px;
-      color: var(--dark);
-      font-weight: 700;
-    }
-
-    .sobre-list li::before {
-      content: "✓";
-      flex-shrink: 0;
-      width: 24px;
-      height: 24px;
-      background: var(--primary-light);
-      color: var(--primary-dark);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    /* Serviços Avulsos */
-    .servicos {
-      background: var(--white);
-    }
-
-    .servicos-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
-
-    .servico-card {
-      background: var(--bg-champagne);
-      border-radius: var(--radius-lg);
-      padding: 36px 30px;
-      border: 1px solid rgba(184, 104, 120, 0.06);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: var(--transition-smooth);
-    }
-
-    .servico-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
-      border-color: rgba(184, 104, 120, 0.15);
-    }
-
-    .servico-card h3 {
-      font-size: 24px;
-      color: var(--primary-dark);
-      margin-bottom: 16px;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .servico-card ul {
-      display: grid;
-      gap: 10px;
-      margin-bottom: 24px;
-    }
-
-    .servico-card ul li {
-      font-size: 14px;
-      color: var(--dark-soft);
-      padding-left: 20px;
-      position: relative;
-      line-height: 1.5;
-    }
-
-    .servico-card ul li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--primary);
-      font-weight: bold;
-      font-size: 16px;
-      top: -1px;
-    }
-
-    .servico-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: auto;
-      padding-top: 20px;
-      border-top: 1px dashed rgba(184, 104, 120, 0.15);
-    }
-
-    .price-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--dark-soft);
-      font-weight: 700;
-    }
-
-    .price-value {
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--dark);
-    }
-
-    /* Pacotes de Recovery */
-    .pacotes {
-      background: var(--bg-champagne);
-    }
-
-    .pacotes-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-
-    .pacote-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 40px 32px;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      border: 1px solid rgba(184, 104, 120, 0.08);
-      transition: var(--transition-smooth);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .pacote-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .pacote-badge {
-      position: absolute;
-      top: -14px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-      color: var(--white);
-      padding: 6px 18px;
-      border-radius: var(--radius-pill);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      box-shadow: 0 4px 10px rgba(197, 168, 128, 0.3);
-    }
-
-    .pacote-card.destaque {
-      border: 2px solid var(--primary);
-    }
-
-    .pacote-card.destaque::before {
-      content: "MAIS RECOMENDADO";
-      position: absolute;
-      top: -14px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--primary);
-      color: var(--white);
-      padding: 6px 18px;
-      border-radius: var(--radius-pill);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      box-shadow: 0 4px 10px rgba(184, 104, 120, 0.3);
-    }
-
-    .pacote-title {
-      font-size: 28px;
-      font-family: 'Playfair Display', serif;
-      color: var(--dark);
-      margin-bottom: 8px;
-      text-align: center;
-    }
-
-    .pacote-meta {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 24px;
-    }
-
-    .pacote-meta span {
-      background: var(--primary-light);
-      color: var(--primary-dark);
-      padding: 4px 12px;
-      border-radius: var(--radius-pill);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .pacote-card ul {
-      display: grid;
-      gap: 12px;
-      margin-bottom: 32px;
-      padding-top: 10px;
-    }
-
-    .pacote-card ul li {
-      font-size: 14px;
-      color: var(--dark-soft);
-      padding-left: 24px;
-      position: relative;
-    }
-
-    .pacote-card ul li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--primary);
-      font-weight: 800;
-    }
-
-    .pacote-precos-box {
-      background: var(--bg-champagne);
-      border-radius: var(--radius-md);
-      padding: 20px;
-      margin-top: auto;
-      border: 1px solid rgba(184, 104, 120, 0.05);
-    }
-
-    .preco-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 6px 0;
-      font-size: 14px;
-      font-weight: 600;
-      border-bottom: 1px solid rgba(184, 104, 120, 0.08);
-    }
-
-    .preco-row:last-child {
-      border-bottom: none;
-      font-weight: 700;
-      color: var(--primary-dark);
-    }
-
-    .preco-row span:last-child {
-      font-weight: 800;
-    }
-
-    .pacote-precos-box small {
-      display: block;
-      font-size: 11px;
-      color: var(--dark-soft);
-      text-align: center;
-      margin-top: 10px;
-      font-weight: 500;
-    }
-
-    /* Programas Continuos / Planos */
-    .programas {
-      background: var(--white);
-    }
-
-    .programas-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-
-    .programa-card {
-      background: var(--bg-champagne);
-      border-radius: var(--radius-lg);
-      padding: 44px 36px;
-      border: 1px solid rgba(184, 104, 120, 0.08);
-      display: flex;
-      flex-direction: column;
-      transition: var(--transition-smooth);
-      position: relative;
-    }
-
-    .programa-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
-      border-color: rgba(184, 104, 120, 0.2);
-    }
-
-    .programa-card.premium {
-      border: 2px solid var(--accent);
-      background: var(--white);
-    }
-
-    .programa-card.premium::before {
-      content: "LONGEVIDADE PREMIUM";
-      position: absolute;
-      top: -14px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-      color: var(--white);
-      padding: 6px 18px;
-      border-radius: var(--radius-pill);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      box-shadow: 0 4px 10px rgba(197, 168, 128, 0.3);
-    }
-
-    .programa-card h3 {
-      font-size: 30px;
-      color: var(--dark);
-      text-align: center;
-      margin-bottom: 4px;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .programa-subtitle {
-      font-size: 13px;
-      color: var(--dark-soft);
-      text-align: center;
-      margin-bottom: 24px;
-      font-weight: 600;
-    }
-
-    .programa-price-box {
-      text-align: center;
-      margin-bottom: 28px;
-      padding: 16px 0;
-      border-top: 1px solid rgba(184, 104, 120, 0.1);
-      border-bottom: 1px solid rgba(184, 104, 120, 0.1);
-    }
-
-    .programa-price-box span {
-      display: block;
-      font-size: 12px;
-      color: var(--dark-soft);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .programa-price-box strong {
-      font-size: 36px;
-      font-weight: 800;
-      color: var(--primary-dark);
-      letter-spacing: -0.02em;
-    }
-
-    .programa-card ul {
-      display: grid;
-      gap: 12px;
-      margin-bottom: 36px;
-    }
-
-    .programa-card ul li {
-      font-size: 14px;
-      color: var(--dark-soft);
-      padding-left: 26px;
-      position: relative;
-      line-height: 1.5;
-    }
-
-    .programa-card ul li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--primary);
-      font-weight: 800;
-    }
-
-    .programa-card .btn {
-      margin-top: auto;
-      width: 100%;
-    }
-
-    /* FAQ */
-    .faq {
-      background: var(--bg-champagne);
-    }
-
-    .faq-list {
-      max-width: 800px;
-      margin: 0 auto;
-      display: grid;
-      gap: 16px;
-    }
-
-    .faq-item {
-      background: var(--white);
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(184, 104, 120, 0.08);
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-      transition: var(--transition-smooth);
-    }
-
-    .faq-item:hover {
-      box-shadow: var(--shadow-md);
-      border-color: rgba(184, 104, 120, 0.15);
-    }
-
-    .faq-item summary {
-      padding: 24px 30px;
-      font-weight: 700;
-      font-size: 17px;
-      color: var(--dark);
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      outline: none;
-    }
-
-    .faq-item summary::-webkit-details-marker { 
-      display: none; 
-    }
-
-    .faq-item summary::after {
-      content: "+";
-      font-size: 24px;
-      color: var(--primary);
-      transition: var(--transition-smooth);
-      font-weight: 400;
-      line-height: 1;
-    }
-
-    .faq-item[open] summary::after {
-      transform: rotate(45deg);
-      color: var(--dark-soft);
-    }
-
-    .faq-item p {
-      padding: 0 30px 24px;
-      color: var(--dark-soft);
-      font-size: 15px;
-      line-height: 1.6;
-      border-top: 1px solid rgba(184, 104, 120, 0.04);
-      margin-top: -4px;
-    }
-
-    /* Banner CTA Final */
-    .cta-secao {
-      background: var(--white);
-      padding: 60px 0;
-    }
-
-    .cta-banner {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color: var(--white);
-      text-align: center;
-      border-radius: var(--radius-xl);
-      padding: 80px 40px;
-      box-shadow: var(--shadow-lg);
-      position: relative;
-      overflow: hidden;
-      border: 4px solid var(--white);
-    }
-
-    .cta-banner::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 300px;
-      height: 300px;
-      background: rgba(255, 255, 255, 0.06);
-      border-radius: 50%;
-      z-index: 0;
-    }
-
-    .cta-banner-content {
-      position: relative;
-      z-index: 1;
-      max-width: 680px;
-      margin: 0 auto;
-    }
-
-    .cta-banner h2 {
-      font-size: clamp(32px, 5vw, 46px);
-      color: var(--white);
-      margin-bottom: 20px;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .cta-banner p {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 18px;
-      margin-bottom: 36px;
-      font-weight: 400;
-    }
-
-    .cta-banner .btn-primary {
-      background: var(--white);
-      color: var(--primary-dark);
-      font-weight: 800;
-      box-shadow: 0 10px 25px rgba(44, 31, 33, 0.15);
-    }
-
-    .cta-banner .btn-primary:hover {
-      background: var(--bg-champagne);
-      transform: translateY(-3px);
-      box-shadow: 0 16px 35px rgba(44, 31, 33, 0.25);
-    }
-
-    /* Footer */
-    footer {
-      background: var(--dark);
-      color: rgba(255, 255, 255, 0.7);
-      padding: 80px 0 40px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .footer-inner {
-      display: grid;
-      grid-template-columns: 1.3fr 0.9fr 0.8fr;
-      gap: 60px;
-      margin-bottom: 60px;
-    }
-
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 20px;
-    }
-
-    .footer-brand img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--accent);
-    }
-
-    .footer-brand strong {
-      display: block;
-      color: var(--white);
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
-
-    .footer-brand span {
-      font-family: 'Alex Brush', cursive;
-      color: var(--accent);
-      font-size: 20px;
-    }
-
-    .footer-desc {
-      font-size: 14px;
-      line-height: 1.6;
-      max-width: 320px;
-    }
-
-    footer h4 {
-      color: var(--white);
-      font-size: 16px;
-      margin-bottom: 24px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    footer ul {
-      display: grid;
-      gap: 12px;
-      font-size: 14px;
-    }
-
-    footer ul a {
-      transition: var(--transition-smooth);
-    }
-
-    footer ul a:hover {
-      color: var(--accent);
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 30px;
-      font-size: 13px;
-      text-align: center;
-      color: rgba(255, 255, 255, 0.4);
-    }
-
-    /* WhatsApp Floating Button */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: #25D366;
-      color: var(--white);
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.4);
-      z-index: 9999;
-      transition: var(--transition-smooth);
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1) rotate(5deg);
-      box-shadow: 0 16px 36px rgba(37, 211, 102, 0.55);
-    }
-
-    .whatsapp-tooltip {
-      position: absolute;
-      right: 80px;
-      background: var(--white);
-      color: var(--dark);
-      padding: 10px 18px;
-      border-radius: var(--radius-md);
-      font-size: 13px;
-      font-weight: 700;
-      white-space: nowrap;
-      box-shadow: var(--shadow-md);
-      pointer-events: none;
-      opacity: 0;
-      transform: translateX(10px);
-      transition: var(--transition-smooth);
-      border: 1px solid rgba(184, 104, 120, 0.1);
-    }
-
-    .whatsapp-tooltip::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: -6px;
-      transform: translateY(-50%) rotate(45deg);
-      width: 10px;
-      height: 10px;
-      background: var(--white);
-      border-right: 1px solid rgba(184, 104, 120, 0.1);
-      border-top: 1px solid rgba(184, 104, 120, 0.1);
-    }
-
-    .whatsapp-float:hover .whatsapp-tooltip {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    /* Efeitos de Scroll Reveal */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .reveal.in-view {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Delays de Animação de Scroll */
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-
-    @media (prefers-reduced-motion: reduce) {
-      .reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-    }
-
-    /* Responsividade */
-    @media (max-width: 991px) {
-      section {
-        padding: 70px 0;
-      }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--bg-champagne);
-        flex-direction: column;
-        gap: 0;
-        padding: 16px 24px;
-        border-bottom: 1px solid rgba(184, 104, 120, 0.1);
-        box-shadow: 0 10px 20px rgba(44, 31, 33, 0.04);
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links a {
-        display: block;
-        padding: 14px 0;
-        border-bottom: 1px solid rgba(184, 104, 120, 0.05);
-      }
-
-      .nav-links a::after {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-cta {
-        padding: 10px 20px;
-        font-size: 13px;
-      }
-
-      .hero-inner, .sobre-inner {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .hero-visual {
-        order: -1;
-        margin-bottom: 20px;
-      }
-
-      .hero-image-wrapper img {
-        width: 100%;
-        max-width: 340px;
-        height: 380px;
-      }
-
-      .pilares-grid, .servicos-grid, .pacotes-grid, .programas-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .sobre-box {
-        padding: 40px 24px;
-      }
-
-      .sobre-list {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-inner {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-    }
-  </style>
+    .hero h1 { font-size: 32px; }
+    .services-grid, .steps, .portfolio-grid, .testimonials-grid, .pricing-grid, .stats-grid, .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
 </head>
 <body>
 
-  <!-- Menu e Cabeçalho -->
-  <header id="header">
-    <div class="container">
-      <nav class="nav">
-        <div class="brand">
-          <img src="assets/logo-brand.png" alt="Fisioterapia Bruna Dominguez">
-          <div class="brand-text">
-            <strong>Fisio para Bailarinas</strong>
-            <span>by Bruna Dominguez</span>
-          </div>
-        </div>
-        <ul class="nav-links">
-          <li><a href="#sobre">Sobre a Bruna</a></li>
-          <li><a href="#pilares">Os Pilares</a></li>
-          <li><a href="#servicos">Tratamentos</a></li>
-          <li><a href="#pacotes">Recovery</a></li>
-          <li><a href="#programas">Reabilitação</a></li>
-          <li><a href="#faq">Dúvidas</a></li>
-        </ul>
-        <button class="menu-toggle" aria-label="Menu principal" aria-expanded="false">☰</button>
-        <a class="nav-cta" href="https://wa.me/5541995538552?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener">Agendar Consulta</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <nav class="nav container">
+    <a href="#" class="logo" style="display:flex; align-items:center; gap:10px;">
+      <svg width="32" height="32" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGradNav" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#1e56a0"/>
+            <stop offset="100%" stop-color="#0a1a33"/>
+          </linearGradient>
+        </defs>
+        <rect x="1" y="1" width="70" height="70" rx="18" fill="url(#logoGradNav)" stroke="#6fa8dc" stroke-width="1.5"/>
+        <text x="36" y="46" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="28" fill="#ffffff">LP</text>
+        <path d="M20 54 L28 46 L36 52 L52 34" stroke="#6fa8dc" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Learning<span>Pages</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#processo">Processo</a></li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="#precos">Preços</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+    </ul>
+    <a href="#contato" class="btn nav-cta">Fale conosco</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">&#9776;</button>
+  </nav>
+</header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="container hero-inner">
-      <div class="reveal">
-        <span class="eyebrow">Fisioterapia Especializada para Dança</span>
-        <h1>Proteja seu corpo, dance sem limites e <span class="gradient">eleve sua performance</span></h1>
-        <p class="lead">Recuperação rápida pós-ensaio, prevenção ativa contra lesões comuns no ballet e reabilitação avançada por quem entende perfeitamente os desafios da barra e do palco.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-whatsapp" href="https://wa.me/5541995538552?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20pacotes%20de%20Fisioterapia." target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.76.457 3.473 1.326 4.978L2 22l5.183-1.361c1.455.793 3.09 1.213 4.825 1.213 5.506 0 9.992-4.486 9.992-9.992C22.004 6.486 17.518 2 12.012 2zm5.728 14.152c-.25.7-.75 1.25-1.378 1.628-.5.3-1.127.472-1.875.472-1.222 0-2.658-.588-3.957-1.887-1.3-1.3-1.887-2.735-1.887-3.957 0-.748.172-1.375.472-1.875.378-.628.928-1.128 1.628-1.378.2-.07.45-.1.65-.1.17 0 .32.01.42.02.24.03.45.17.56.39.25.5.6 1.35.75 1.65.07.15.05.32-.05.45l-.47.6c-.15.2-.17.47-.05.67.62 1 1.42 1.8 2.42 2.42.2.12.47.1.67-.05l.6-.47c.13-.1.3-.12.45-.05.3.15 1.15.5 1.65.75.22.11.36.32.39.56.01.1.02.25.02.42 0 .2-.03.45-.1.65z"/>
-            </svg>
-            Agendar pelo WhatsApp
-          </a>
-          <a class="btn btn-outline" href="#pacotes">Ver Planos e Valores</a>
-        </div>
-        <ul class="credentials-strip">
-          <li>CREFITO 427547-F</li>
-          <li>Bailarina Profissional (DRT 0035472/PR)</li>
-          <li>Formação no Método Vaganova</li>
-        </ul>
-      </div>
-      <div class="hero-visual reveal reveal-delay-2">
-        <div class="hero-blob"></div>
-        <div class="hero-image-wrapper">
-          <img src="assets/logo.jpg" alt="Bruna Dominguez Fisioterapeuta">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sobre a Profissional -->
-  <section class="sobre" id="sobre">
-    <div class="container sobre-inner">
-      <div class="sobre-visual reveal">
-        <div class="sobre-photo">
-          <img src="assets/bruna.jpg" alt="Bruna Dominguez, fisioterapeuta e bailarina">
-        </div>
-      </div>
-      <div class="sobre-text reveal reveal-delay-1">
-        <span class="eyebrow">Quem cuida de você</span>
-        <h2>Quem compreende o palco, cura melhor a lesão</h2>
-        <p>Bruna Dominguez é <strong>fisioterapeuta graduada</strong> e <strong>bailarina profissional ativa (DRT 0035472/PR)</strong>. Professora de ballet clássico desde 2019 e especializada pela prestigiada metodologia Vaganova.</p>
-        <p>Essa vivência prática em cima das pontas e o conhecimento clínico acadêmico formam uma conexão única. Bruna sabe exatamente o peso de uma rotina intensa de ensaios, a tensão pré-espetáculo e as dores específicas causadas pela repetição técnica exaustiva.</p>
-        <p>Aqui, você não é tratada com protocolos genéricos de convênios. Você recebe um cuidado altamente individualizado, focado na reabilitação e no fortalecimento do corpo que expressa arte.</p>
-        <ul class="sobre-list">
-          <li>Fisioterapeuta CREFITO 427547-F</li>
-          <li>Bailarina profissional (DRT 0035472/PR)</li>
-          <li>Especialista em Biomecânica da Dança</li>
-          <li>Formada na metodologia Vaganova</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Os 3 Pilares -->
-  <section class="pilares" id="pilares">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Por que fisioterapia especializada?</span>
-        <h2>A Ciência por trás da Performance Artística</h2>
-        <p>Bailarinas exigem do corpo de um jeito totalmente singular. Um tratamento tradicional não atende as nuances da dança. Por isso, nosso método se baseia em 3 pilares fundamentais:</p>
-      </div>
-      <div class="pilares-grid">
-        <div class="pilar-card reveal">
-          <div class="pilar-icon">🩰</div>
-          <h3>1. Biomecânica da Dança</h3>
-          <p>Análise aprofundada dos movimentos técnicos como en dehors, trabalho de pontas, saltos e giros. O tratamento é desenhado respeitando as demandas e limites anatômicos da bailarina.</p>
-        </div>
-        <div class="pilar-card reveal reveal-delay-1">
-          <div class="pilar-icon">⚡</div>
-          <h3>2. Recovery Inteligente</h3>
-          <p>Combinação científica de liberação miofascial, eletroanalgesia e ventosaterapia de fluxo. O objetivo é remover dores residuais e o cansaço extremo pós-ensaio, sem retirar você de cena.</p>
-        </div>
-        <div class="pilar-card reveal reveal-delay-2">
-          <div class="pilar-icon">🎯</div>
-          <h3>3. Prevenção Ativa</h3>
-          <p>O foco principal é evitar lesões recorrentes causadas pelo estresse mecânico de ensaios exaustivos. Fortalecemos pontos vulneráveis (tornozelo, joelho e coluna) mantendo sua flexibilidade ativa.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tratamentos / Sessões Avulsas -->
-  <section class="servicos" id="servicos">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Serviços e Tratamentos</span>
-        <h2>Menu de Terapias Clínicas</h2>
-        <p>Sessões avulsas ideais para reabilitação focada ou alívio imediato da dor, ajustadas de acordo com as necessidades do seu corpo no momento.</p>
-      </div>
-      <div class="servicos-grid">
-        <!-- 1 -->
-        <div class="servico-card reveal">
-          <div>
-            <h3>Liberação Miofascial</h3>
-            <ul>
-              <li>Desfaz nódulos de tensão profunda e pontos de gatilho.</li>
-              <li>Aumenta a amplitude de movimento e flexibilidade.</li>
-              <li>Prepara a musculatura para ensaios e melhora a circulação.</li>
-            </ul>
-          </div>
-          <div class="servico-footer">
-            <span class="price-label">Sessão individual</span>
-            <span class="price-value">R$ 100,00</span>
-          </div>
-        </div>
-        <!-- 2 -->
-        <div class="servico-card reveal reveal-delay-1">
-          <div>
-            <h3>Ventosaterapia</h3>
-            <ul>
-              <li>Combate ativamente a fadiga muscular pós-ensaios.</li>
-              <li>Estimula a oxigenação dos tecidos locais.</li>
-              <li>Acelera a liberação de toxinas musculares.</li>
-            </ul>
-          </div>
-          <div class="servico-footer">
-            <span class="price-label">Sessão individual</span>
-            <span class="price-value">R$ 80,00</span>
-          </div>
-        </div>
-        <!-- 3 -->
-        <div class="servico-card reveal reveal-delay-2">
-          <div>
-            <h3>Laser Terapêutico</h3>
-            <ul>
-              <li>Ação analgésica rápida em dores articulares e tendíneas.</li>
-              <li>Estimula a cicatrização celular de pequenas lesões.</li>
-              <li>Combate processos inflamatórios agudos com fotobiomodulação.</li>
-            </ul>
-          </div>
-          <div class="servico-footer">
-            <span class="price-label">Sessão individual</span>
-            <span class="price-value">R$ 70,00</span>
-          </div>
-        </div>
-        <!-- 4 -->
-        <div class="servico-card reveal">
-          <div>
-            <h3>Kinesiotaping</h3>
-            <ul>
-              <li>Fitas de suporte dinâmico para estabilizar articulações.</li>
-              <li>Alivia a pressão nos receptores sensoriais sem limitar movimentos.</li>
-              <li>Excelente suporte preventivo para ensaios e apresentações.</li>
-            </ul>
-          </div>
-          <div class="servico-footer">
-            <span class="price-label">Aplicação</span>
-            <span class="price-value">R$ 60,00</span>
-          </div>
-        </div>
-        <!-- 5 -->
-        <div class="servico-card reveal reveal-delay-1">
-          <div>
-            <h3>Eletroestimulação (TENS)</h3>
-            <ul>
-              <li>Alívio rápido de dores agudas e crônicas por correntes elétricas.</li>
-              <li>Relaxa a musculatura esquelética profunda.</li>
-              <li>Auxilia na reeducação muscular sem impacto mecânico.</li>
-            </ul>
-          </div>
-          <div class="servico-footer">
-            <span class="price-label">Sessão individual</span>
-            <span class="price-value">R$ 100,00</span>
-          </div>
-        </div>
-        <!-- 6 -->
-        <div class="servico-card reveal reveal-delay-2">
-          <div>
-            <h3>Auriculoterapia</h3>
-            <ul>
-              <li>Controle de ansiedade e estresse pré-competição e espetáculo.</li>
-              <li>Melhora na regulação e qualidade restauradora do sono.</li>
-              <li>Equilíbrio energético corporal através de pontos auricular neurais.</li>
-            </ul>
-          </div>
-          <div class="servico-footer">
-            <span class="price-label">Sessão individual</span>
-            <span class="price-value">R$ 40,00</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pacotes de Recovery -->
-  <section class="pacotes" id="pacotes">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Combos de Performance</span>
-        <h2>Combos Rápidos de Recovery</h2>
-        <p>Protocolos rápidos focados em alívio acelerado para rotinas intensas. Quanto mais sessões adquiridas, maior o desconto por sessão.</p>
-      </div>
-      <div class="pacotes-grid">
-        <!-- Express -->
-        <div class="pacote-card reveal">
-          <div class="pacote-title">Express</div>
-          <div class="pacote-meta">
-            <span>3 Etapas</span>
-            <span>45 minutos</span>
-          </div>
-          <ul>
-            <li>Eletroestimulação analgésica</li>
-            <li>Ventosaterapia local</li>
-            <li>Laser terapêutico regenerativo</li>
-          </ul>
-          <div class="pacote-precos-box">
-            <div class="preco-row"><span>1 Sessão avulsa</span><span>R$ 120,00</span></div>
-            <div class="preco-row"><span>Combo c/ 2 sessões</span><span>R$ 110,00/s</span></div>
-            <div class="preco-row"><span>Combo c/ 3 sessões</span><span>R$ 105,00/s</span></div>
-            <div class="preco-row"><span>Combo c/ 4 sessões</span><span>R$ 100,00/s</span></div>
-            <small>Valores por sessão no combo</small>
-          </div>
-        </div>
-
-        <!-- Performance -->
-        <div class="pacote-card destaque reveal reveal-delay-1">
-          <div class="pacote-title">Performance</div>
-          <div class="pacote-meta">
-            <span>4 Etapas</span>
-            <span>60 minutos</span>
-          </div>
-          <ul>
-            <li>Eletroestimulação analgésica</li>
-            <li>Ventosaterapia corporal total</li>
-            <li>Laser terapêutico regenerativo</li>
-            <li>Liberação Miofascial localizada</li>
-          </ul>
-          <div class="pacote-precos-box">
-            <div class="preco-row"><span>1 Sessão avulsa</span><span>R$ 150,00</span></div>
-            <div class="preco-row"><span>Combo c/ 2 sessões</span><span>R$ 140,00/s</span></div>
-            <div class="preco-row"><span>Combo c/ 3 sessões</span><span>R$ 130,00/s</span></div>
-            <div class="preco-row"><span>Combo c/ 4 sessões</span><span>R$ 125,00/s</span></div>
-            <small>Valores por sessão no combo</small>
-          </div>
-        </div>
-
-        <!-- Premium -->
-        <div class="pacote-card reveal reveal-delay-2">
-          <div class="pacote-title">VIP Premium</div>
-          <div class="pacote-meta">
-            <span>6 Etapas</span>
-            <span>90 minutos</span>
-          </div>
-          <ul>
-            <li>Eletroestimulação analgésica</li>
-            <li>Ventosaterapia corporal total</li>
-            <li>Laser terapêutico regenerativo</li>
-            <li>Liberação Miofascial completa</li>
-            <li>Aplicação de Kinesiotaping</li>
-            <li>Auriculoterapia integrada</li>
-          </ul>
-          <div class="pacote-precos-box">
-            <div class="preco-row"><span>1 Sessão avulsa</span><span>R$ 200,00</span></div>
-            <div class="preco-row"><span>Combo c/ 2 sessões</span><span>R$ 190,00/s</span></div>
-            <div class="preco-row"><span>Combo c/ 3 sessões</span><span>R$ 180,00/s</span></div>
-            <div class="preco-row"><span>Combo c/ 4 sessões</span><span>R$ 175,00/s</span></div>
-            <small>Valores por sessão no combo</small>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Programas Continuos / Planos -->
-  <section class="programas" id="programas">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Programas de Tratamento</span>
-        <h2>Acompanhamento Contínuo Individualizado</h2>
-        <p>Para bailarinas focadas em manter o corpo blindado e livre de lesões durante toda a temporada de ensaios e apresentações.</p>
-      </div>
-      <div class="programas-grid">
-        <!-- Aurora -->
-        <div class="programa-card reveal">
-          <h3>Aurora</h3>
-          <div class="programa-subtitle">Manutenção Essencial</div>
-          <div class="programa-price-box">
-            <span>Pacote Mensal</span>
-            <strong>R$ 340,00</strong>
-          </div>
-          <ul>
-            <li><strong>4 Sessões</strong> individuais de 1 hora.</li>
-            <li>Plano de tratamento totalmente focado no seu nível técnico.</li>
-            <li>Acompanhamento clínico continuado.</li>
-            <li>1 sessão de auriculoterapia cortesia.</li>
-          </ul>
-          <a class="btn btn-outline" href="https://wa.me/5541995538552?text=Quero%20contratar%20o%20Programa%20Aurora." target="_blank" rel="noopener">Escolher Programa</a>
-        </div>
-
-        <!-- Paquita -->
-        <div class="programa-card premium reveal reveal-delay-1">
-          <h3>Paquita</h3>
-          <div class="programa-subtitle">Performance Avançada</div>
-          <div class="programa-price-box">
-            <span>Pacote Bimestral</span>
-            <strong>R$ 480,00</strong>
-          </div>
-          <ul>
-            <li><strong>6 Sessões</strong> individuais de 1 hora.</li>
-            <li>Plano clínico e corretivo de biomecânica.</li>
-            <li>1 sessão de auriculoterapia inclusa.</li>
-            <li>1 sessão de ventosaterapia de fluxo.</li>
-            <li>Suporte prioritário via WhatsApp.</li>
-          </ul>
-          <a class="btn btn-whatsapp" href="https://wa.me/5541995538552?text=Quero%20contratar%20o%20Programa%20Paquita." target="_blank" rel="noopener">Escolher Programa</a>
-        </div>
-
-        <!-- Medora -->
-        <div class="programa-card reveal reveal-delay-2">
-          <h3>Medora</h3>
-          <div class="programa-subtitle">Blindagem Absoluta</div>
-          <div class="programa-price-box">
-            <span>Temporada Completa</span>
-            <strong>R$ 750,00</strong>
-          </div>
-          <ul>
-            <li><strong>10 Sessões</strong> completas de 1 hora.</li>
-            <li>Protocolo clínico completo de prevenção.</li>
-            <li>1 sessão de auriculoterapia integrada.</li>
-            <li>1 sessão de ventosaterapia profunda.</li>
-            <li>1 liberação miofascial esportiva.</li>
-            <li>1 aplicação preventiva de Kinesiotaping.</li>
-          </ul>
-          <a class="btn btn-outline" href="https://wa.me/5541995538552?text=Quero%20contratar%20o%20Programa%20Medora." target="_blank" rel="noopener">Escolher Programa</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq" id="faq">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Dúvidas Frequentes</span>
-        <h2>Perguntas Frequentes</h2>
-        <p>Tem alguma dúvida antes de iniciar o seu tratamento? Aqui estão as respostas para as perguntas mais comuns.</p>
-      </div>
-      <div class="faq-list">
-        <details class="faq-item reveal" open>
-          <summary>Preciso ser bailarina profissional para me consultar?</summary>
-          <p>De forma alguma! O atendimento é focado em bailarinas e bailarinos de qualquer nível — de alunas adultas iniciantes a profissionais. Os tratamentos de recovery, alívio de dor muscular e reabilitação articular também trazem excelentes resultados para o público geral que busca um cuidado premium e personalizado.</p>
-        </details>
-        <details class="faq-item reveal">
-          <summary>Qual a diferença entre a sessão avulsa e os combos/programas?</summary>
-          <p>A sessão avulsa é ideal para uma necessidade imediata (como uma contratura pós-ensaio ou aplicação rápida de bandagem). Já os combos de Recovery e Programas Continuados são pacotes recomendados para quem deseja constância no tratamento, prevenção de lesões recorrentes e economia significativa no valor unitário das sessões.</p>
-        </details>
-        <details class="faq-item reveal">
-          <summary>Onde são realizados os atendimentos presenciais?</summary>
-          <p>Os atendimentos presenciais são realizados em Curitiba/PR em uma clínica moderna, confortável e com estrutura adaptada. Você receberá o endereço exato e todas as instruções de acesso logo após alinhar seu horário no WhatsApp.</p>
-        </details>
-        <details class="faq-item reveal">
-          <summary>Como funcionam as formas de pagamento?</summary>
-          <p>Aceitamos pagamentos via PIX, dinheiro e cartões de crédito ou débito. Para os pacotes mensais e programas contínuos, oferecemos opções de parcelamento facilitado no cartão.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Banner CTA Final -->
-  <section class="cta-secao">
-    <div class="container">
-      <div class="cta-banner reveal">
-        <div class="cta-banner-content">
-          <h2>Seu corpo é o seu instrumento de arte. Cuide dele.</h2>
-          <p>Não espere a dor limitar sua coreografia ou tirar você de cena. Agende hoje mesmo sua avaliação biomecânica com Bruna Dominguez.</p>
-          <a class="btn btn-primary" href="https://wa.me/5541995538552?text=Olá!%20Desejo%20agendar%20uma%20consulta." target="_blank" rel="noopener">Quero Agendar Minha Sessão</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Rodapé -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div>
-          <div class="footer-brand">
-            <img src="assets/logo.jpg" alt="Logo Bruna Dominguez">
-            <div>
-              <strong>Fisio para Bailarinas</strong>
-              <span>by Bruna Dominguez</span>
-            </div>
-          </div>
-          <p class="footer-desc">Fisioterapia especializada voltada para dança, unindo raciocínio clínico de ponta com a vivência real dos palcos de ballet clássico.</p>
-        </div>
-        <div>
-          <h4>Navegação</h4>
-          <ul>
-            <li><a href="#home">Início</a></li>
-            <li><a href="#sobre">Sobre a Bruna</a></li>
-            <li><a href="#servicos">Tratamentos Clínicos</a></li>
-            <li><a href="#pacotes">Recovery Express</a></li>
-            <li><a href="#programas">Reabilitação Contínua</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contato</h4>
-          <ul>
-            <li><a href="https://wa.me/5541995538552" target="_blank" rel="noopener">WhatsApp: (41) 99553-8552</a></li>
-            <li><a href="https://instagram.com/fisioparabailarinas" target="_blank" rel="noopener">Instagram: @fisioparabailarinas</a></li>
-            <li>Curitiba - PR</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Bruna Dominguez — Fisioterapeuta CREFITO 427547-F. Todos os direitos reservados.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- WhatsApp Flutuante com Dica -->
-  <a class="whatsapp-float" href="https://wa.me/5541995538552?text=Olá!%20Gostaria%20de%20tirar%20algumas%20dúvidas." target="_blank" rel="noopener" aria-label="Fale comigo no WhatsApp">
-    <div class="whatsapp-tooltip">Dúvidas? Agende seu horário aqui!</div>
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.76.457 3.473 1.326 4.978L2 22l5.183-1.361c1.455.793 3.09 1.213 4.825 1.213 5.506 0 9.992-4.486 9.992-9.992C22.004 6.486 17.518 2 12.012 2zm5.728 14.152c-.25.7-.75 1.25-1.378 1.628-.5.3-1.127.472-1.875.472-1.222 0-2.658-.588-3.957-1.887-1.3-1.3-1.887-2.735-1.887-3.957 0-.748.172-1.375.472-1.875.378-.628.928-1.128 1.628-1.378.2-.07.45-.1.65-.1.17 0 .32.01.42.02.24.03.45.17.56.39.25.5.6 1.35.75 1.65.07.15.05.32-.05.45l-.47.6c-.15.2-.17.47-.05.67.62 1 1.42 1.8 2.42 2.42.2.12.47.1.67-.05l.6-.47c.13-.1.3-.12.45-.05.3.15 1.15.5 1.65.75.22.11.36.32.39.56.01.1.02.25.02.42 0 .2-.03.45-.1.65z"/>
+<section class="cover">
+  <div class="cover-logo">
+    <svg width="120" height="120" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="logoGradCover" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#1e56a0"/>
+          <stop offset="100%" stop-color="#0a1a33"/>
+        </linearGradient>
+      </defs>
+      <rect x="1" y="1" width="70" height="70" rx="18" fill="url(#logoGradCover)" stroke="#6fa8dc" stroke-width="1.5"/>
+      <text x="36" y="46" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="28" fill="#ffffff">LP</text>
+      <path d="M20 54 L28 46 L36 52 L52 34" stroke="#6fa8dc" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-  </a>
+  </div>
+  <h1 class="cover-title">Learning<span>Pages</span></h1>
+  <p class="cover-tagline">Criadores de Learning Pages</p>
+  <a href="#hero" class="scroll-cue" aria-label="Rolar para baixo">&#8595;</a>
+</section>
 
-  <!-- JavaScript Interativo -->
-  <script>
-    // Menu Responsivo Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">Especialistas em Educação Corporativa</span>
+      <h1>Criamos <em>learning pages</em> que transformam conhecimento em resultado</h1>
+      <p>Desenvolvemos páginas de treinamento e aprendizagem sob medida para empresas que querem capacitar equipes com clareza, engajamento e performance.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/554197115308" target="_blank" rel="noopener" class="btn btn-primary">Solicitar orçamento</a>
+        <a href="https://viniurbanekk.github.io/Cart-odigital/" target="_blank" rel="noopener" class="btn btn-outline">Ver portfólio</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <ul>
+        <li><span class="check">&#10003;</span> Design responsivo e acessível</li>
+        <li><span class="check">&#10003;</span> Conteúdo pedagógico estruturado</li>
+        <li><span class="check">&#10003;</span> Integração com LMS e plataformas</li>
+        <li><span class="check">&#10003;</span> Métricas de progresso e conclusão</li>
+        <li><span class="check">&#10003;</span> Entrega em até 15 dias úteis</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    menuToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', isOpen);
-      menuToggle.textContent = isOpen ? '✕' : '☰';
-    });
+<div class="trust">
+  <div class="trust-inner reveal">
+    <span class="trust-label">Confiado por equipes de treinamento em</span>
+    <div class="trust-logos">
+      <span>NEXUS Corp</span>
+      <span>Vértice Ed.</span>
+      <span>Grupo Alfa</span>
+      <span>OrionRH</span>
+      <span>Bússola Corp</span>
+    </div>
+  </div>
+</div>
 
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.textContent = '☰';
-      });
-    });
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">O que fazemos</span>
+      <h2>Serviços para sua learning page</h2>
+      <p>Do planejamento pedagógico ao código final, cuidamos de cada etapa da criação da sua página de aprendizagem.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">&#128221;</div>
+        <h3>Design instrucional</h3>
+        <p>Estruturamos o conteúdo com base em objetivos de aprendizagem claros e metodologias comprovadas.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#127912;</div>
+        <h3>UI/UX personalizado</h3>
+        <p>Layouts exclusivos alinhados à identidade visual da sua marca, pensados para engajar o aluno.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#9881;</div>
+        <h3>Desenvolvimento web</h3>
+        <p>Páginas rápidas, responsivas e compatíveis com os principais navegadores e dispositivos.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#128279;</div>
+        <h3>Integração com LMS</h3>
+        <p>Conectamos sua página aos principais sistemas de gestão de aprendizagem (SCORM, xAPI e mais).</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#128202;</div>
+        <h3>Analytics de aprendizagem</h3>
+        <p>Dashboards para acompanhar progresso, conclusão e engajamento dos participantes em tempo real.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#128295;</div>
+        <h3>Suporte contínuo</h3>
+        <p>Manutenção, atualizações de conteúdo e suporte técnico após a entrega do projeto.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    // Efeito sticky e shadow no header ao rolar a página
-    window.addEventListener('scroll', () => {
-      const header = document.getElementById('header');
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
+<section class="process" id="processo">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Nosso processo em 4 etapas</h2>
+      <p>Um método claro e transparente, do briefing à publicação da sua learning page.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-number">1</div>
+        <h3>Briefing</h3>
+        <p>Entendemos seus objetivos, público-alvo e conteúdo a ser transformado em página.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-number">2</div>
+        <h3>Roteiro e design</h3>
+        <p>Criamos o roteiro pedagógico e o layout visual para aprovação.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-number">3</div>
+        <h3>Desenvolvimento</h3>
+        <p>Codificamos a página com foco em performance, acessibilidade e responsividade.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-number">4</div>
+        <h3>Entrega e suporte</h3>
+        <p>Publicamos, integramos ao seu LMS e acompanhamos os primeiros resultados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Trabalhos recentes</span>
+      <h2>Portfólio de learning pages</h2>
+      <p>Alguns exemplos de páginas de aprendizagem que desenvolvemos para nossos clientes.</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card reveal">
+        <div class="portfolio-thumb">Onboarding Corporativo</div>
+        <div class="portfolio-body">
+          <h3>Trilha de Onboarding</h3>
+          <p>Página de integração para novos colaboradores com módulos interativos.</p>
+        </div>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="portfolio-thumb">Compliance &amp; LGPD</div>
+        <div class="portfolio-body">
+          <h3>Treinamento de Compliance</h3>
+          <p>Curso obrigatório com certificação automática e trilha de avaliação.</p>
+        </div>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="portfolio-thumb">Liderança Ágil</div>
+        <div class="portfolio-body">
+          <h3>Programa de Liderança</h3>
+          <p>Learning page para desenvolvimento de lideranças com estudos de caso.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="reveal">
+        <div class="stat-number">120+</div>
+        <div class="stat-label">Learning pages entregues</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-number">45</div>
+        <div class="stat-label">Empresas atendidas</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">Satisfação dos clientes</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-number">15 dias</div>
+        <div class="stat-label">Prazo médio de entrega</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="depoimentos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Depoimentos</span>
+      <h2>O que nossos clientes dizem</h2>
+      <p>Empresas que confiaram no nosso trabalho para criar suas páginas de aprendizagem.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <p class="quote">"A equipe entregou uma learning page que superou nossas expectativas. O engajamento dos colaboradores aumentou significativamente."</p>
+        <div class="testimonial-author">
+          <div class="avatar">MC</div>
+          <div>
+            <div class="author-name">Mariana Costa</div>
+            <div class="author-role">Gerente de T&amp;D, NEXUS Corp</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <p class="quote">"Processo transparente do início ao fim. A integração com nosso LMS foi tranquila e o suporte pós-entrega é excelente."</p>
+        <div class="testimonial-author">
+          <div class="avatar">RS</div>
+          <div>
+            <div class="author-name">Rodrigo Silva</div>
+            <div class="author-role">Head de RH, Grupo Alfa</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="precos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Planos</span>
+      <h2>Planos para todo tipo de projeto</h2>
+      <p>Escolha o plano ideal para o tamanho e a complexidade da sua learning page.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="plan reveal">
+        <h3>Essencial</h3>
+        <div class="price">R$ 2.900<span>/projeto</span></div>
+        <p class="plan-desc">Ideal para páginas de treinamento simples e diretas.</p>
+        <ul>
+          <li>&#10003; Até 5 seções de conteúdo</li>
+          <li>&#10003; Design responsivo</li>
+          <li>&#10003; 1 rodada de revisão</li>
+          <li>&#10003; Entrega em 10 dias úteis</li>
+        </ul>
+        <a href="#contato" class="btn btn-primary">Escolher plano</a>
+      </div>
+      <div class="plan featured reveal">
+        <span class="plan-badge">Mais escolhido</span>
+        <h3>Profissional</h3>
+        <div class="price">R$ 5.900<span>/projeto</span></div>
+        <p class="plan-desc">Para learning pages completas com integração e analytics.</p>
+        <ul>
+          <li>&#10003; Seções ilimitadas</li>
+          <li>&#10003; Design personalizado</li>
+          <li>&#10003; Integração com LMS</li>
+          <li>&#10003; Dashboard de progresso</li>
+          <li>&#10003; 3 rodadas de revisão</li>
+          <li>&#10003; Entrega em 15 dias úteis</li>
+        </ul>
+        <a href="#contato" class="btn btn-primary">Escolher plano</a>
+      </div>
+      <div class="plan reveal">
+        <h3>Enterprise</h3>
+        <div class="price">Sob consulta</div>
+        <p class="plan-desc">Para programas de treinamento com múltiplas learning pages.</p>
+        <ul>
+          <li>&#10003; Projetos ilimitados</li>
+          <li>&#10003; Gerente de conta dedicado</li>
+          <li>&#10003; SLA personalizado</li>
+          <li>&#10003; Suporte prioritário</li>
+        </ul>
+        <a href="#contato" class="btn btn-outline" style="border-color: var(--gray-300); color: var(--navy);">Falar com vendas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contato">
+  <div class="container reveal">
+    <h2>Pronto para criar sua learning page?</h2>
+    <p>Fale com nossa equipe e receba uma proposta personalizada para o seu projeto de treinamento.</p>
+    <a href="https://wa.me/554197115308" target="_blank" rel="noopener" class="btn btn-primary">Solicitar orçamento</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">Learning<span>Pages</span></a>
+      <p>Criamos páginas de aprendizagem que transformam conhecimento em resultado para empresas de todos os tamanhos.</p>
+    </div>
+    <div>
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Recursos</h4>
+      <ul>
+        <li><a href="#precos">Preços</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="mailto:contato@learningpages.com.br">contato@learningpages.com.br</a></li>
+        <li><a href="tel:+551140028922">(11) 4002-8922</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 LearningPages. Todos os direitos reservados.
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
       }
     });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
 
-    // Observer para Animação Scroll Reveal (IntersectionObserver)
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          revealObserver.unobserve(entry.target); // Anima apenas uma vez ao entrar no viewport
-        }
-      });
-    }, { 
-      threshold: 0.1, 
-      rootMargin: "0px 0px -50px 0px" // Dispara ligeiramente antes de entrar totalmente
-    });
-
-    document.querySelectorAll('.reveal').forEach(el => {
-      revealObserver.observe(el);
-    });
-  </script>
+  document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+</script>
 
 </body>
 </html>
